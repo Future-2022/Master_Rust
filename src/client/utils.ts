@@ -8,6 +8,7 @@ import path from 'path';
 import yaml from 'yaml';
 import {Keypair} from '@solana/web3.js';
 
+
 /**
  * @private
  */
@@ -23,6 +24,7 @@ async function getConfig(): Promise<any> {
   const configYml = await fs.readFile(CONFIG_FILE_PATH, {encoding: 'utf8'});
   return yaml.parse(configYml);
 }
+
 
 /**
  * Load and parse the Solana CLI config file to determine which RPC url to use
